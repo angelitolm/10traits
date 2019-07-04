@@ -10,12 +10,11 @@
 // ===============================================================
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from "react-router-dom"
 
 // ===============================================================
 // Import Components
 // ===============================================================
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav, Link } from 'react-bootstrap'
 import BLink from './BLink'
 // import { connect } from 'react-redux'
 // import { activeLink, inactiveLink, snoozeLink } from '../store'
@@ -36,11 +35,11 @@ export default function BNavbar ({ loading, links, linksSignin, onInactive, onAc
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <span className="glow-text">
-                <Link className="lmenu"><span>Loading</span> <span>cool</span> <span>state</span></Link>
-                <Link className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></Link>
-                <Link className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></Link>
-                <Link className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></Link>
-                <Link className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></Link>
+                <a className="lmenu"><span>Loading</span> <span>cool</span> <span>state</span></a>
+                <a className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></a>
+                <a className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></a>
+                <a className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></a>
+                <a className="lmenu" ><span>Loading</span> <span>cool</span> <span>state</span></a>
               </span>
             </Nav>
           </Navbar.Collapse>
