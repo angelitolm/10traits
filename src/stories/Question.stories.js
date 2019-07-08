@@ -21,9 +21,11 @@ export function createQuestion(attrs) {
   return {
 	min1: '0',
 	max1: '100',
+  valslide1: 0,
 	min2: '0',
 	max2: '100',
-    id: Math.round(Math.random() * 1000000).toString(),
+  valslide2: 0,
+  id: Math.round(Math.random() * 1000000).toString(),
 	title: '10TRAITS ASSESSMENT',
 	number: '1',
 	subtitle: 'Willignes to take risks',
@@ -55,12 +57,14 @@ export function createQuestion(attrs) {
   }
 }
 
-// Add stories
 export const actions = {
   onActiveQuestion: action('onActiveQuestion'),
   onInactiveQuestion: action('onInactiveQuestion'),
 }
 
+// stories.addDecorator(withKnobs)
+// Add stories
 storiesOf('Components|Question', module)
+  // .addDecorator(withKnobs)
   .add('inactive', () => <Question question={createQuestion({ state: 'INACTIVE_QUESTION' }) } {...actions} />)
   .add('active', () => <Question question={createQuestion({ state: 'ACTIVE_QUESTION' }) } {...actions} />)

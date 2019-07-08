@@ -16,6 +16,7 @@ import PropTypes from 'prop-types'
 // ===============================================================
 import { Container, Navbar, Nav, Link } from 'react-bootstrap'
 import BLink from './BLink'
+import BLinkSignin from './BLinkSignin'
 // import { connect } from 'react-redux'
 // import { activeLink, inactiveLink, snoozeLink } from '../store'
 
@@ -95,6 +96,7 @@ export default function BNavbar ({ loading, links, linksSignin, onInactive, onAc
 BNavbar.propTypes = {
   loading: PropTypes.bool,
   links: PropTypes.arrayOf(BLink.propTypes.link).isRequired,
+  linksSignin: PropTypes.arrayOf(BLinkSignin.propTypes.link).isRequired,
   onInactive: PropTypes.func.isRequired,
   onActive: PropTypes.func.isRequired,
 }

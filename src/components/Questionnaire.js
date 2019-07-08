@@ -8,7 +8,7 @@
 // ===============================================================
 // Import Modules
 // ===============================================================
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 
@@ -27,15 +27,25 @@ export default function Questionnaire ({ loading, questions, onActiveQuestion, o
      onInactiveQuestion
    }
 
-   let items = [];
-   for (let i = 1; i <= 10; i++) {
-     for(let j = 1; j <= questions.length; j++){
-       items.push(
-         <Pagination.Item key={i} active={i === questions.number}>
-           {i}
-         </Pagination.Item>,
-       )
-     }
+
+   // Formating number
+   // let counter = 1
+   // questions.map(function (){
+   //   if(questions[0].valslide1 !== counter)
+   //     parseFloat(questions[0].valslide1)
+   //
+   //  counter++
+   // })
+
+   let counter = 1
+   for (let j = 0; j <= questions.length; j++) {
+     if(questions.valslide1 !== counter)
+       parseFloat(questions.valslide1)
+
+      if(questions.valslide2 !== counter)
+        parseFloat(questions.valslide2)
+
+     counter++
    }
 
   const LoadingRow = (

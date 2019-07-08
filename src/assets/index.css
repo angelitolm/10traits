@@ -84,11 +84,11 @@ html {
   -ms-text-size-adjust: 100%;
 }
 a:focus {
-  outline: thin dotted;
+  /* outline: thin dotted; */
 }
 a:hover,
 a:active {
-  outline: 0;
+  /* outline: 0; */
 }
 article,
 aside,
@@ -215,7 +215,7 @@ button,
 input,
 textarea,
 select {
-  outline: none;
+  /* outline: none; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -296,7 +296,7 @@ textarea {
   border-radius: 0;
   box-sizing: border-box;
   color: #333;
-  outline: none;
+  /* outline: none; */
 }
 input[type="text"] ::placeholder,
 input[type="email"] ::placeholder,

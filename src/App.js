@@ -19,6 +19,9 @@ import { Provider } from "react-redux"
 // import Route from "./components/Routes"
 import { setCurrentUser, logoutUser } from "./actions/authActions"
 import store from "./store"
+import BNavbar from './components/BNavbar'
+import Question from './components/Question'
+import { QuestioOne } from './stories/Questionnaire.stories'
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -42,14 +45,14 @@ if (localStorage.jwtToken) {
 
 class App extends Component {
   render () {
-  return (
-    <div className="App">
-      <header className="App-header">
-
-      </header>
-    </div>
-  )
-}
+    return (
+      <div className="App">
+        <header className="App-header">
+          <QuestioOne />
+        </header>
+      </div>
+    )
+  }
 }
 
 export default App
